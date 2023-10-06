@@ -5,3 +5,7 @@
 :root {
   background-color: #1b1d29;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
