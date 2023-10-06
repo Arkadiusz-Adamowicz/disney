@@ -1,13 +1,16 @@
-import Header from "./components/Header";
+import Header from './components/Header/Header';
+import Movies from './components/Movies/Movies';
+import useMovies from './hooks/useMovies';
 
 const App = () => {
+  const { movies } = useMovies();
+  console.log(movies);
   return (
-    <div>
+    <>
       <Header />
-    </div>
+      <Movies movies={movies} />
+    </>
   );
 };
 
 export default App;
-
-// https://www.youtube.com/watch?v=3NHYl0Lo74A&list=PLaBeGKL1tOU0pbIVu1I3ZcBZ7BJkN0isz&index=12
