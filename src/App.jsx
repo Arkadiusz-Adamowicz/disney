@@ -1,5 +1,5 @@
 import Header from './components/Header/Header';
-import Movies from './components/Movies/Movies';
+// import Movies from './components/Movies/Movies';
 import Slider from './components/Slider/Slider';
 import useMovies from './hooks/useMovies';
 

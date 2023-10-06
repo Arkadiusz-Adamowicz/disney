@@ -17,7 +17,11 @@ const Slider = () => {
       <div className='flex gap-4 mb-5 mx-5'>
         {logos.map((logo, i) => (
           <div key={i} className='bg-[#31343E] rounded-lg'>
-            <img src={logo} alt='logo' />
+            <img
+              src={logo}
+              alt='logo'
+              className='hover:scale-[120%] transition-all'
+            />
           </div>
         ))}
       </div>
