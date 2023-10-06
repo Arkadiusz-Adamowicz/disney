@@ -1,30 +1,24 @@
-import { Carousel } from '@material-tailwind/react';
-import disney from '../../assets/Images/disney.png';
-import marvel from '../../assets/Images/marvel.png';
-import nationalG from '../../assets/Images/nationalG.png';
-import pixar from '../../assets/Images/pixar.png';
-import starwars from '../../assets/Images/starwars.png';
+import { Carousel } from "@material-tailwind/react";
+import useMovies from "../../hooks/useMovies";
 
 const Slider = () => {
-  const logos = [disney, marvel, nationalG, pixar, starwars];
+  const { movies } = useMovies();
+  const image_base_url = "https://image.tmdb.org/t/p/original";
   return (
-    <div className='text-white h-[500px] w-full flex items-center justify-center gap-5 flex-col'>
-      <Carousel className='bg-black'>
-        <div className='flex items-center justify-center'>
-          <img src='' className='object-cover bg-black' />
-        </div>
+    <div className="text-white w-full flex items-center justify-center flex-col mr-5">
+      <Carousel autoplay loop>
+        {movies
+          .sort((a, b) => (a.title < b.title ? -1 : 1))
+          .map((movie) => (
+            <div key={movie.id} className="flex px-16 py-4 mb-8">
+              <h2 className="absolute p-2 font-bold text-2xl">{movie.title}</h2>
+              <img
+                src={image_base_url + movie.backdrop_path}
+                className="min-w-full h-[200px] md:h-[450px]  object-cover object-top bg-red-500 rounded-lg shadow-lg shadow-black"
+              />
+            </div>
+          ))}
       </Carousel>
-      <div className='flex gap-4 mb-5 mx-5'>
-        {logos.map((logo, i) => (
-          <div key={i} className='bg-[#31343E] rounded-lg'>
-            <img
-              src={logo}
-              alt='logo'
-              className='hover:scale-[120%] transition-all'
-            />
-          </div>
-        ))}
-      </div>
     </div>
   );
 };

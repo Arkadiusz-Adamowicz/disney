@@ -10,7 +10,7 @@ const useMovies = () => {
     const getMovies = async () => {
       try {
         const res = await axios.get(
-          `${base_url}/trending/all/day?api_key=${api_key}`
+          `${base_url}/movie/now_playing?api_key=${api_key}`
         );
         const data = res.data.results;
         setMovies(data);
@@ -23,7 +23,9 @@ const useMovies = () => {
   }, [base_url, api_key]);
 
   return {
-    movies,
+    movies, base_url
   };
 };
 export default useMovies;
+
+
