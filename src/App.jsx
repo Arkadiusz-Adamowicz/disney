@@ -9,8 +9,8 @@ const App = () => {
   return (
     <>
       <Header />
-      <Slider movies={movies} />
-      <Movies movies={movies} />
+      <Slider />
+      {/* <Movies movies={movies} /> */}
     </>
   );
 };
