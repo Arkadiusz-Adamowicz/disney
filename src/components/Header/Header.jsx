@@ -43,7 +43,7 @@ const Header = () => {
           <div className='md:hidden' onClick={() => setToggle(!toggle)}>
             <HeaderItem Icon={HiDotsVertical} />
             {toggle && (
-              <div className='absolute mt-4 bg-[#1b1d29] border-[#31343E] border-[1px] p-4 rounded-md flex flex-col gap-2 right-10'>
+              <div className='absolute mt-4 bg-[#1b1d29] border-[#31343E] border-[1px] p-4 rounded-md flex flex-col gap-2 right-10 z-10'>
                 {menu.map(
                   (item, i) =>
                     i > 2 && (
