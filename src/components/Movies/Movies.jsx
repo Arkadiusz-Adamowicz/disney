@@ -6,7 +6,7 @@ const Movies = () => {
     useMovies();
 
   return (
-    <div className='px-[60px]'>
+    <div className='px-5 md:px-[60px]'>
       <div className='text-white flex flex-col w-full mb-[-20px] gap-5 m-auto'>
         <div className='flex flex-col gap-5 mt-4'>
           <h2 className='text-15px md:text-[22px] px-1 font-bold'>
