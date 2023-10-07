@@ -1,20 +1,100 @@
 import Movie from './Movie';
 import useMovies from '../../hooks/useMovies';
 
-const Movies = ({ genreId }) => {
-  const { movies } = useMovies();
-  console.log(movies);
+const Movies = () => {
+  const { movies, topRated, trending, action, comedy, documentary, tv } =
+    useMovies();
 
   return (
-    <div className='text-white flex overflow-x-auto w-full pt-5 px-3 pb-10 mb-[-20px] gap-5 m-auto'>
-      {movies
-        .sort((a, b) => (a.title < b.title ? -1 : 1))
-        .filter(movie => movie.genre_ids.includes(genreId))
-        .map(movie => (
-          <div key={movie.id}>
-            <Movie movie={movie} />
+    <div className='px-[60px]'>
+      <div className='text-white flex flex-col w-full mb-[-20px] gap-5 m-auto'>
+        <div className='flex flex-col gap-5 mt-4'>
+          <h2 className='text-15px md:text-[22px] px-1 font-bold'>
+            Now Playing
+          </h2>
+          <div className='flex overflow-x-auto px-1 pt-1 pb-10 gap-5'>
+            {movies.map(movie => (
+              <div key={movie.id}>
+                <Movie movie={movie} />
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+      </div>
+      <div className='text-white flex flex-col w-full mb-[-20px] gap-5 m-auto'>
+        <div className='flex flex-col gap-5 mt-4'>
+          <h2 className='text-15px md:text-[22px] px-1 font-bold'>Top Rated</h2>
+          <div className='flex overflow-x-auto px-1 pt-1 pb-10 gap-5'>
+            {topRated.map(movie => (
+              <div key={movie.id}>
+                <Movie movie={movie} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className='text-white flex flex-col w-full mb-[-20px] gap-5 m-auto'>
+        <div className='flex flex-col gap-5 mt-4'>
+          <h2 className='text-15px md:text-[22px] px-1 font-bold'>Trending</h2>
+          <div className='flex overflow-x-auto px-1 pt-1 pb-10 gap-5'>
+            {trending.map(movie => (
+              <div key={movie.id}>
+                <Movie movie={movie} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className='text-white flex flex-col w-full mb-[-20px] gap-5 m-auto'>
+        <div className='flex flex-col gap-5 mt-4'>
+          <h2 className='text-15px md:text-[22px] px-1 font-bold'>Action</h2>
+          <div className='flex overflow-x-auto px-1 pt-1 pb-10 gap-5'>
+            {action.map(movie => (
+              <div key={movie.id}>
+                <Movie movie={movie} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className='text-white flex flex-col w-full mb-[-20px] gap-5 m-auto'>
+        <div className='flex flex-col gap-5 mt-4'>
+          <h2 className='text-15px md:text-[22px] px-1 font-bold'>Comedy</h2>
+          <div className='flex overflow-x-auto px-1 pt-1 pb-10 gap-5'>
+            {comedy.map(movie => (
+              <div key={movie.id}>
+                <Movie movie={movie} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className='text-white flex flex-col w-full mb-[-20px] gap-5 m-auto'>
+        <div className='flex flex-col gap-5 mt-4'>
+          <h2 className='text-15px md:text-[22px] px-1 font-bold'>
+            Documentary
+          </h2>
+          <div className='flex overflow-x-auto px-1 pt-1 pb-10 gap-5'>
+            {documentary.map(movie => (
+              <div key={movie.id}>
+                <Movie movie={movie} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className='text-white flex flex-col w-full mb-[-20px] gap-5 m-auto'>
+        <div className='flex flex-col gap-5 mt-4'>
+          <h2 className='text-15px md:text-[22px] px-1 font-bold'>TV</h2>
+          <div className='flex overflow-x-auto px-1 pt-1 pb-10 gap-5'>
+            {tv.map(movie => (
+              <div key={movie.id}>
+                <Movie movie={movie} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

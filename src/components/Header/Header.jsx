@@ -21,7 +21,7 @@ const Header = () => {
     { name: 'SERIES', icon: HiTv },
   ];
   return (
-    <div className='flex items-center justify-between py-4 px-5'>
+    <div className='flex items-center justify-between pt-4 pb-2 px-5'>
       <div className='flex gap-8 items-center'>
         <img
           src={logo}
@@ -29,7 +29,7 @@ const Header = () => {
           className='w-[120px] ml-[-20px] object-cover'
         />
         {/* desktop nav */}
-        <div className='hidden md:flex gap-6'>
+        <div className='hidden md:flex gap-6 '>
           {menu.map((item, i) => (
             <HeaderItem key={i} name={item.name} Icon={item.icon} />
           ))}

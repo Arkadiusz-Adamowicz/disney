@@ -1,7 +1,7 @@
 import Header from './components/Header/Header';
 import Slider from './components/Slider/Slider';
 import ProductionHouse from './components/ProductionHouse/ProductionHouse';
-import MoviesByGenre from './components/MoviesByGenre/MoviesByGenre';
+import Movies from './components/Movies/Movies';
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
       <Header />
       <Slider />
       <ProductionHouse />
-      <MoviesByGenre />
+      <Movies />
     </>
   );
 };
