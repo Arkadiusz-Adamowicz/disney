@@ -13,7 +13,7 @@ const Slider = () => {
             <div key={movie.id} className='flex px-16 py-4 mb-8'>
               <img
                 src={image_base_url + movie.backdrop_path}
-                className='min-w-full h-[200px] md:h-[420px] object-cover object-top bg-red-500 rounded-lg shadow-lg shadow-black border-[2px] border-gray-600'
+                className='min-w-full h-[200px] md:h-[420px] object-cover object-top  rounded-lg shadow-lg shadow-black border-[2px] border-gray-600'
               />
             </div>
           ))}
