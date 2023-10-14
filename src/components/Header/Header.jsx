@@ -1,4 +1,5 @@
 import logo from '../../assets/Images/logo.png';
+import avatar from '../../assets/Images/avatar.png';
 import { useState } from 'react';
 import {
   HiMagnifyingGlass,
@@ -58,11 +59,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <img
-        src='https://arkadiusz-adamowicz.netlify.app/static/media/foto.e4b39b240635ba514e05.jpeg'
-        alt='avatar'
-        className='w-[40px] rounded-full'
-      />
+      <img src={avatar} alt='avatar' className='w-[40px] rounded-full' />
     </div>
   );
 };
