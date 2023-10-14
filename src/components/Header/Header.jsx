@@ -22,15 +22,15 @@ const Header = () => {
     { name: 'SERIES', icon: HiTv },
   ];
   return (
-    <div className='flex items-center justify-between pt-4 pb-2 px-5'>
-      <div className='flex gap-8 items-center'>
+    <div className='flex items-center justify-between pt-4 pb-2 px-5 md:px-16'>
+      <div className='flex md:gap-5 gap-2 items-center'>
         <img
           src={logo}
           alt='logo'
           className='w-[120px] ml-[-20px] object-cover'
         />
         {/* desktop nav */}
-        <div className='hidden md:flex gap-6 '>
+        <div className='hidden md:flex gap-6'>
           {menu.map((item, i) => (
             <HeaderItem key={i} name={item.name} Icon={item.icon} />
           ))}
@@ -47,7 +47,7 @@ const Header = () => {
           >
             <HeaderItem Icon={HiDotsVertical} />
             {toggle && (
-              <div className='absolute mt-4 bg-[#1b1d29] border-[#31343E] border-[1px] p-2 rounded-md flex flex-col gap-2 z-10'>
+              <div className='absolute mt-3  text-center bg-[#1b1d29] border-gray-600 border-[2px] p-1 rounded-md flex flex-col z-10'>
                 {menu.map(
                   (item, i) =>
                     i > 2 && (
