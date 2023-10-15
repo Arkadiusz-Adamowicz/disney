@@ -20,7 +20,7 @@ const Slider = () => {
               <div key={movie.id}>
                 <img
                   src={image_base_url + movie.backdrop_path}
-                  className='w-full h-[200px] md:h-[420px] object-cover object-top'
+                  className='w-full h-[200px] md:h-[460px] object-cover object-top'
                 />
               </div>
             ))}
