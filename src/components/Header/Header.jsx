@@ -47,7 +47,7 @@ const Header = () => {
           >
             <HeaderItem Icon={HiDotsVertical} />
             {toggle && (
-              <div className='absolute mt-3  text-center bg-[#1b1d29] border-gray-600 border-[2px] p-1 rounded-md flex flex-col z-10'>
+              <div className='absolute mt-3 right-3 text-center bg-[#1b1d29] border-gray-600 border-[2px] p-1 rounded-md flex flex-col z-10'>
                 {menu.map(
                   (item, i) =>
                     i > 2 && (
